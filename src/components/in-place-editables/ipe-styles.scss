@@ -1,0 +1,88 @@
+/*
+In-Place admin-Editable fileds (IPEs)
+*/
+
+// General IPE definitions
+$ipeSvg-width: 1rem;
+$ipeSvg-height: 1rem;
+$ipeSvg-color: #78868C;
+$ipeBtn-width: 1.5rem;
+$ipeBtn-height: 1.5rem;
+
+
+.ipe-container {
+  position: relative;
+
+  .ipe-panel {
+    display: none;
+    flex-direction: row;
+    z-index: 1;
+
+    .ipebtn {
+      width: $ipeBtn-width;
+      height: $ipeBtn-height;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+
+      svg {
+        width: $ipeSvg-width;
+        height: $ipeSvg-height;
+        fill: $ipeSvg-color;
+      }
+    } // btn
+
+    .ipebtn.bigger120 {
+      svg {
+        width: calc($ipeSvg-width * (120/100));
+        height: calc($ipeSvg-height * (120/100));
+      }
+    }
+  } // panel
+
+  .ipe-panel.float.in.top.right {
+    position: sticky;
+    top: 0;
+    float: right;
+  }
+
+  .ipe-panel.absolute.out.top.right {
+    position: absolute;
+    top: 0;
+    right: -$ipeBtn-width;
+  }
+  .ipe-panel.absolute.out.top.right.editing {
+    right: -$ipeBtn-width - $ipeBtn-width;
+  }
+
+  .ipe-panel.absolute.in.top.right {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+  }
+  .ipe-panel.absolute.in.top.right.editing {
+    top: 0.4rem;
+    right: 0;
+  }
+
+  *[contentEditable=true]:focus-visible {
+    outline: none;
+  }
+  *[contentEditable=true] {
+    padding: 0.125rem 0.25rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.35rem;
+  }
+
+  input[type=datetime-local].ipe-duedate {
+    margin-right: 3.5rem;
+    width: 14.5rem;
+  }
+
+  input[type=datetime-local].ipe-duedate::-webkit-datetime-edit {
+    padding: .3rem .5rem;
+  }
+
+} // container

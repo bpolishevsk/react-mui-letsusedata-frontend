@@ -1,0 +1,39 @@
+.search-field-with-icon {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  position: relative;
+  background-color: rgba(0, 97, 137, 0.03);
+  border-radius: 0.75rem;
+
+  span.icon {
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+  }
+
+  input {
+    width: calc(100% - 24px);
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin-left: 0.75rem;
+    background-color: #f3f6f7;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+  input::placeholder {
+    color: #a0a0a0;
+  }
+
+  &.outlined {
+    border: 1px solid #d9d9d9;
+    background-color: #FEFEFE;
+    input {
+      background-color: #FEFEFE;
+      color: #a0a0a0;
+    }
+  }
+}

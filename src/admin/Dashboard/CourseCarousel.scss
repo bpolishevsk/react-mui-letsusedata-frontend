@@ -1,0 +1,121 @@
+.course-carousel {
+  min-height: 390px;
+  position: relative;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 16px;
+  width: 100%;
+
+  .course-card {
+    width: 260px;
+    height: 360px;
+    border: 2px solid #bfbfbf;
+    border-radius: 12px;
+    background: #fdfdfd;
+    margin: 0 0.5rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      border: 2px solid var(--bs-primary);
+      background-color: rgba(204, 233, 245, 0.15);
+
+      .video-container {
+        background-color: rgba(204, 233, 245, 0.15);
+      }
+
+      .card-footer-part {
+        background-color: rgba(204, 233, 245, 0.15);
+      }
+    }
+
+    .course-stat-title {
+      font-weight: 500;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #808080;
+    }
+
+    .course-stat-content {
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #404040;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s;
+      padding: 1.5rem;
+
+      h3.course-title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        color: #404040;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .video-part {
+        height: 120px;
+        overflow: hidden;
+        border-radius: 9.6px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        margin-bottom: 1.25rem;
+      }
+
+      .card-actions {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+  .btn-card-nav {
+    svg {
+      color: #2ba4d6;
+    }
+    border: 2px solid #2ba4d6;
+    border-radius: 0.75rem;
+    height: 5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    box-shadow: none;
+    color: #2ba4d6;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+
+    background-color: rgba(0, 146, 206, 0.15);
+  }
+
+  .btn-card-prev {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    z-index: 51;
+    backdrop-filter: blur(10px);
+    svg {
+      color: #2ba4d6;
+    }
+  }
+  .btn-card-next {
+    position: absolute;
+    right: -1.75rem;
+    top: 50%;
+    transform: translate(0px, -50%);
+    z-index: 51;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+  }
+}

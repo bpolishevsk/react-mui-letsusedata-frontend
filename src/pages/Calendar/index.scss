@@ -1,0 +1,145 @@
+@import url("react-calendar/dist/Calendar.css");
+
+.calendar-container {
+  display: flex;
+
+  .calendar-content {
+    flex: 1 1 100%;
+    padding: 2rem 1rem 3rem 2rem;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .scheduler-wrapper {
+    margin-top: 48px;
+  }
+
+  .calendar-sidebar {
+    width: 420px;
+    padding: 2rem;
+
+    &-calendar {
+      margin-bottom: 2rem;
+      margin-top: 3rem;
+    }
+
+    h5 {
+      line-height: 1.5;
+      color: #404040;
+    }
+
+    .instructors-list {
+      .instructor-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 20px 0.75rem 0.75rem;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.75rem;
+        margin-top: 16px;
+
+        .instructor-avatar {
+          display: flex;
+          align-items: flex-end;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: contain;
+          }
+
+          .dot {
+            position: relative;
+            left: -0.75rem;
+            bottom: 2px;
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 0.75rem;
+            background-color: var(--bs-success);
+          }
+        }
+
+        .instructor-detail {
+          flex: 1;
+          .instructor-name {
+            font-weight: 600;
+            color: #353535;
+          }
+          .instructor-role {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: #606060;
+          }
+        }
+
+        .instructor-actions {
+          display: flex;
+          align-items: center;
+
+          .instructor-action {
+            background: #f2f2f2;
+            border-radius: 7px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            margin-left: 0.75rem;
+
+            svg {
+              color: #a0a0a0;
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.scheduler-wrapper {
+  .day-scale-cell {
+    div {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: #353535;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1rem;
+      color: #606060;
+    }
+
+    &.today {
+      color: var(--bs-primary);
+      div {
+        color: var(--bs-primary);
+      }
+      span {
+        color: var(--bs-primary);
+      }
+    }
+  }
+}
+
+.timeScaleCell {
+  font-size: 1rem;
+  width: 116px;
+  height: 84px;
+  display: flex;
+  font-weight: 500 !important;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #d9d9d9;
+  position: relative;
+  color: #606060 !important;
+}

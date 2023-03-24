@@ -1,0 +1,28 @@
+/*
+SweetAlert2 Custom styles
+*/
+
+$ipeBtn-width: 1rem;
+$ipeBtn-height: 1rem;
+$ipeBtn-color: #78868C;
+
+
+.swal-general-popup {
+   border-radius: 1.25rem!important;
+   max-width: 27.75rem;
+   padding: 0!important;
+}
+.swal-general-htmlcontainer {
+   font-size: 1.25rem!important;
+   font-weight: 400!important;
+   line-height: 150%!important;
+   margin: 2rem!important;
+}
+.swal-general-actions {
+   min-width: 50%;
+   margin: 0.25rem 2rem 2rem 2rem!important;
+   max-width: 100%;
+}
+.swal-general-button {
+   width: 100%
+}

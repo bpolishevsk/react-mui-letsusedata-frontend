@@ -1,0 +1,86 @@
+.page-student-detail {
+  .img-student {
+    width: 120px;
+    height: 120px;
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+    }
+  }
+
+  .student-detail {
+    background: #f2f2f2;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .student-profile-info {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .student-profile-info-item {
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      margin-right: 1rem;
+      height: 75px;
+      width: 75px;
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      &.email {
+        background-color: #e0e9ea;
+
+        svg {
+          color: #0c6170;
+        }
+      }
+
+      &.joined {
+        background-color: #e3eee8;
+
+        svg {
+          color: #219653;
+        }
+      }
+
+      &.school {
+        background-color: #e3e3ee;
+
+        svg {
+          color: #212696;
+        }
+      }
+
+      &.grade {
+        background-color: #ece3ee;
+
+        svg {
+          color: #7f2196;
+        }
+      }
+    }
+
+    .info-wrapper {
+      .info-subject {
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: #404040;
+      }
+
+      .info-content {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #404040;
+      }
+    }
+  }
+}
